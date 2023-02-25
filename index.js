@@ -96,8 +96,6 @@ function rollingHash(s, base = 31, modulus = 1e9 + 7) {
   }
 
 
-
-
 module.exports = {
     polynomialHash,
     rollingHash,

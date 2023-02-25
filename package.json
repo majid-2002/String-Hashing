@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/majid-2002/String-Hashing/issues"
   },
-  "homepage": "https://github.com/majid-2002/String-Hashing#readme"
+  "homepage": "https://github.com/majid-2002/String-Hashing#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
 }
