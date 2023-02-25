@@ -1,0 +1,23 @@
+{
+  "name": "hash-utils-js",
+  "version": "1.0.0",
+  "description": "This is a library for hashing Strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majid-2002/String-Hashing.git"
+  },
+  "keywords": [
+    "hashing",
+    "string-hashing"
+  ],
+  "author": "Abdul Majid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majid-2002/String-Hashing/issues"
+  },
+  "homepage": "https://github.com/majid-2002/String-Hashing#readme"
+}
