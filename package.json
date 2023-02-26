@@ -1,5 +1,5 @@
 {
-  "name": "hash-utils-js",
+  "name": "crypto-hashing-js",
   "version": "1.0.0",
   "description": "This is a library for hashing Strings",
   "main": "index.js",
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "hashing",
-    "string-hashing"
+    "string-hashing",
+    "crypto-hashing-js"
   ],
   "author": "Abdul Majid",
   "license": "ISC",

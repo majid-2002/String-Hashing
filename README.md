@@ -1,14 +1,14 @@
-# Hash-util-js
+# Crypto-hashing-js
 
-hash-util-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, and SHA-256**.
+crypto-hashing-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, and SHA-256**.
 
 
 ## Installation
 
-You can install hash-utils using npm:
+You can install crypto-hashing-js using npm:
 
 ```bash
-npm install hash-util-js
+npm install crypto-hashing-js
 ```
 
 
@@ -45,7 +45,7 @@ Computes the SHA-256 hash value of the input string str. The function returns th
 To use hash-utils in your JavaScript project, you can import the desired functions:
 
 ```javascript
-import { polynomialHash, rollingHash, rabinKarp, md5, sha1, sha256 } from 'hash-utils';
+import { polynomialHash, rollingHash, rabinKarp, md5, sha1, sha256 } from 'crypto-hashing-js';
 ```
 
 ## Examples
@@ -53,7 +53,7 @@ import { polynomialHash, rollingHash, rabinKarp, md5, sha1, sha256 } from 'hash-
 **Polynomial Hashing**
 
 ```javascript
-const { polynomialHash } = require('hash-js');
+const { polynomialHash } = require('crypto-hashing-js');
 
 const str = 'example';
 const hash = polynomialHash(str);
@@ -63,7 +63,7 @@ console.log(hash); // output: 152040089
 **Rolling Hashing**
 
 ```javascript
-const { rollingHash } = require('hash-js');
+const { rollingHash } = require('crypto-hashing-js');
 
 const str = 'example';
 const [leftHash, rightHash] = rollingHash(str);
@@ -73,7 +73,7 @@ console.log(leftHash, rightHash); // output: 877164158 68720961
 **Rabin-Karp Hashing**
 
 ```javascript
-const { rabinKarp } = require('hash-js');
+const { rabinKarp } = require('crypto-hashing-js');
 
 const text = 'example example';
 const pattern = 'example';
@@ -84,7 +84,7 @@ console.log(matches); // output: [0, 8]
 **MD5 hashing**
 
 ```javascript
-const { md5 } = require('hash-js');
+const { md5 } = require('crypto-hashing-js');
 
 const str = 'example';
 const hash = md5(str);
@@ -94,7 +94,7 @@ console.log(hash); // output: '1a79a4d60de6718e8e5b326e338ae533'
 **SHA-1 hashing**
 
 ```javascript
-const { sha1 } = require('hash-js');
+const { sha1 } = require('crypto-hashing-js');
 
 const str = 'example';
 const hash = sha1(str);
@@ -104,7 +104,7 @@ console.log(hash); // output: 'a0f1490c15e3d6e90f9a92be4ca836b83e99a4fa'
 **SHA-256 hashing**
 
 ```javascript
-const { sha256 } = require('hash-js');
+const { sha256 } = require('crypto-hashing-js');
 
 const str = 'example';
 const hash = sha256(str);
