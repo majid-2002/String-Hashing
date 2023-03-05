@@ -1,4 +1,9 @@
-var CryptoJS = require("crypto-js");
+const CryptoJS = require("crypto-js");
+const crypto = require('crypto');
+const Blake2s = require('blake2s-js');
+
+
+
 
 //? 1. Polynomial hashing
 function polynomialHash(s, base = 31, modulus = 1e9 + 7) {
@@ -96,12 +101,54 @@ function rollingHash(s, base = 31, modulus = 1e9 + 7) {
   }
 
 
+  //? 7. SHA-512 hashing:
+  function sha512(str){
+    const hash = crypto.createHash('sha512');
+    hash.update(str);
+    return hash.digest('hex');
+  }
+
+
+
+  //? 8. Blake 2
+
+  function blake2(str, outputSize){
+    const hash = new Blake2s(outputSize);
+    const input = new TextEncoder().encode(str);
+    hash.update(input);
+    return Array.from(new Uint8Array(hash.digest())).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+
+  //? 9. Keccak
+  function keccak(str, outputSize){
+    const Keccak = require('sha3').Keccak;
+    const hash = new Keccak(outputSize);
+    const input = Buffer.from(str);
+    hash.update(input);
+    return hash.digest('hex');
+  }
+
+
+
+
+
+
+
+
 module.exports = {
     polynomialHash,
     rollingHash,
     rabinKarp,
     md5,
     sha1,
-    sha256
+    sha256,
+    sha512,
+    blake2,
+    keccak,
   }
+
+
+
+
   
