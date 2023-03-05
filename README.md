@@ -1,6 +1,6 @@
 # Crypto-hashing-js
 
-crypto-hashing-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, and SHA-256**.
+crypto-hashing-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, SHA-256, SHA-512, Keccak, and Blake2**.
 
 
 ## Installation
