@@ -1,6 +1,6 @@
 # Crypto-hashing-js
 
-crypto-hashing-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, and SHA-256**.
+crypto-hashing-js is a JavaScript package that provides various hashing functions for strings. It includes Polynomial **Hashing, Rolling Hashing, and Rabin-Karp Hashing** for string matching, as well as popular cryptographic hash functions such as **MD5, SHA-1, SHA-256, SHA-512, Keccak, and Blake2**.
 
 
 ## Installation
@@ -38,6 +38,17 @@ _`sha256(str: string): string`_
 
 Computes the SHA-256 hash value of the input string str. The function returns the hash value as a hexadecimal string.
 
+_`sha512(str: string): string`_
+
+Computes the SHA-512 hash value of the input string str. The function returns the hash value as a hexadecimal string.
+
+_`blake2(str: string, outputBits: number): string`_
+
+Computes the Blake2 hash value of the input string str. The function takes an optional parameter outputBits to specify the desired output size, which defaults to 256 bits. The function returns the hash value as a hexadecimal string.
+
+_`keccak(str: string, outputBits: number): string`_
+
+Computes the Keccak hash value of the input string str. The function takes an optional parameter outputBits to specify the desired output size, which defaults to 256 bits. The function returns the hash value as a hexadecimal string.
 
 
 ## Usage
@@ -45,7 +56,7 @@ Computes the SHA-256 hash value of the input string str. The function returns th
 To use hash-utils in your JavaScript project, you can import the desired functions:
 
 ```javascript
-import { polynomialHash, rollingHash, rabinKarp, md5, sha1, sha256 } from 'crypto-hashing-js';
+import { polynomialHash, rollingHash, rabinKarp, md5, sha1, sha256, sha512, keccak, blake2 } from 'crypto-hashing-js';
 ```
 
 ## Examples
@@ -110,3 +121,34 @@ const str = 'example';
 const hash = sha256(str);
 console.log(hash); // output: 'a0cfc76d5d3b59463dc2ffcf0ca4a3a14d9c6a772d6a685c53449e16f4c84dd5'
 ```
+
+**SHA-512 hashing**
+
+```javascript
+const { sha512 } = require('crypto-hashing-js');
+
+const str = 'example';
+const hash = sha512(str);
+console.log(hash); // output: 'abd536...'
+```
+
+**blake2 hashing**
+
+```javascript
+const { blake2 } = require('crypto-hashing-js');
+
+const str = 'example';
+const hash = blake2(str, 32);
+console.log(hash); // output: 'e9b064...'
+```
+
+**keccak hashing**
+
+```javascript
+const { keccak } = require('crypto-hashing-js');
+
+const str = 'example';
+const hash = keccak(str, 256);
+console.log(hash); // output: '2076e37...'
+```
+
