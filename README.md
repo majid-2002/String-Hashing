@@ -42,13 +42,14 @@ _`sha512(str: string): string`_
 
 Computes the SHA-512 hash value of the input string str. The function returns the hash value as a hexadecimal string.
 
+_`blake2(str: string, outputBits: number): string`_
+
+Computes the Blake2 hash value of the input string str. The function takes an optional parameter outputBits to specify the desired output size, which defaults to 256 bits. The function returns the hash value as a hexadecimal string.
+
 _`keccak(str: string, outputBits: number): string`_
 
 Computes the Keccak hash value of the input string str. The function takes an optional parameter outputBits to specify the desired output size, which defaults to 256 bits. The function returns the hash value as a hexadecimal string.
 
-_`blake2(str: string, outputBits: number): string`_
-
-Computes the Blake2 hash value of the input string str. The function takes an optional parameter outputBits to specify the desired output size, which defaults to 256 bits. The function returns the hash value as a hexadecimal string.
 
 ## Usage
 
