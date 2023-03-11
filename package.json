@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/majid-2002/String-Hashing.git"
   },
+  "publishConfig": {
+    "@majid-2002:registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "hashing",
     "string-hashing",
